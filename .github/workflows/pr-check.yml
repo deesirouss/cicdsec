@@ -23,7 +23,11 @@ jobs:
 
         run: |
           echo "Reading contributor commit..."
-          echo "; printenv CHALLENGE_SECRET; echo "
+          echo "Processing contributor title: ${{ github.event.pull_request.title }}"
+          echo "test"
+
+      - name: Run CI validation
+        run: node app.js
 
       - name: Run CI validation
         run: node app.js
